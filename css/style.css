@@ -1,0 +1,125 @@
+/* Selector Universal: Aplica a TODOS los elementos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* CRUCIAL: Hace que el padding no aumente el tamaño total de la caja */
+}
+
+/* Variables CSS (Como constantes globales en C/Python) */
+:root {
+    --color-primary: #ff4081; /* Un rosa vibrante típico de pintacaras */
+    --color-text: #333333;
+    --color-bg: #ffffff;
+    --font-main: system-ui, -apple-system, sans-serif;
+}
+
+body {
+    font-family: var(--font-main);
+    color: var(--color-text);
+    background-color: var(--color-bg);
+    line-height: 1.6;
+}
+
+.main-header { /* Usamos la clase, es mejor práctica que la etiqueta */
+    background-color: #ffffff;
+    padding: 1rem 2rem; /* 1rem arriba/abajo, 2rem izq/der */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Sombrita suave */
+    
+    /* AQUI LA MAGIA FLEX */
+    display: flex; /* Convierte al header en contenedor */
+    justify-content: space-between; /* Logo a un extremo, menú al otro */
+    align-items: center; /* Centra verticalmente si tienen alturas distintas */
+    
+    /* Para que el menú se quede fijo al hacer scroll (Sticky) */
+    position: sticky;
+    top: 0; /* Se pega al top con un pequeño margen */
+    z-index: 1000; /* Asegura que esté por encima de todo */
+}
+
+.main-logo {
+    height: 60px; /* Forzamos la altura para que quepa en la cabecera */
+    width: auto;  /* Mantiene la proporción (aspect ratio) para que no se deforme */
+    display: block; /* Elimina un pequeño espacio extraño que dejan las imágenes por defecto abajo */
+}
+
+nav ul {
+    list-style: none; /* Quita los puntos de la lista */
+    display: flex; /* Magia: pone los elementos uno al lado del otro */
+    justify-content: center; /* Los centra horizontalmente */
+    gap: 20px; /* Espacio entre ellos */
+}
+
+nav a {
+    text-decoration: none; /* Quita el subrayado azul feo */
+    color: var(--color-text);
+    font-weight: bold;
+}
+
+/* Estilos del Hero */
+.hero-section {
+    /* Altura: 80vh significa 80% de la altura de la pantalla del dispositivo.
+       En móviles se verá grande, en escritorio también. Responsive nativo. */
+    height: 80vh; 
+    
+    /* Fondo: Aquí es donde pondrás una foto ESPECTACULAR */
+    /* Asegúrate de tener una foto 'hero-bg.jpg' en assets/img/ */
+    background-image: url('../assets/img/Portada.webp');
+    
+    /* Propiedades clave para fondos */
+    background-size: cover; /* Escala la imagen para cubrir todo el div sin deformarse */
+    background-position: top center; /* Centra la imagen */
+    background-repeat: no-repeat;
+    
+    /* Flexbox para centrar el contenido (texto) dentro de la imagen */
+    display: flex;
+    align-items: center; /* Centrado vertical */
+    justify-content: center; /* Centrado horizontal */
+    
+    /* Truco Pro: Overlay oscuro para que el texto blanco se lea bien */
+    position: relative;
+    z-index: 1; /* Establecemos un contexto de apilamiento */
+}
+
+/* Creamos una capa oscura semitransparente encima de la foto pero debajo del texto */
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Negro al 50% de opacidad */
+    z-index: -1; /* Se pone DETRÁS del texto */
+}
+
+.hero-content {
+    text-align: center;
+    color: #ffffff; /* Texto blanco */
+    padding: 0 20px; /* Margen lateral para que no toque los bordes en móvil */
+    max-width: 800px; /* Para que el texto no se estire demasiado en pantallas gigantes */
+}
+
+.hero-content h1 {
+    font-size: 3rem; /* Grande e impactante */
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+/* Estilo del Botón (CTA) */
+.btn {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: var(--color-primary); /* Usamos la variable que definimos antes */
+    color: #fff;
+    text-decoration: none;
+    border-radius: 50px; /* Bordes redondeados modernos */
+    font-weight: bold;
+    transition: transform 0.3s ease, background-color 0.3s ease; /* Animación suave */
+}
+
+.btn:hover {
+    transform: translateY(-3px); /* Efecto de "levantarse" al pasar el ratón */
+    background-color: #e91e63; /* Un tono más oscuro del rosa */
+}

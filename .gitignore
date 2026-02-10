@@ -1,0 +1,4 @@
+.DS_Store       # Basura de Mac
+Thumbs.db       # Basura de Windows
+.vscode/        # Tu configuración personal del editor
+node_modules/   # (Lo usaremos en el futuro, mejor ponerlo ya)
