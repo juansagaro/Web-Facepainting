@@ -123,3 +123,49 @@ nav a {
     transform: translateY(-3px); /* Efecto de "levantarse" al pasar el ratón */
     background-color: #e91e63; /* Un tono más oscuro del rosa */
 }
+
+/* Estilos Generales de Sección */
+.gallery-section {
+    padding: 4rem 2rem;
+    background-color: #f9f9f9; /* Un gris muy clarito para separar secciones */
+    text-align: center;
+}
+
+.section-subtitle {
+    color: #666;
+    margin-bottom: 3rem;
+    font-size: 1.1rem;
+}
+
+/* EL GRID */
+.gallery-grid {
+    display: grid;
+    /* ANÁLISIS DE INGENIERÍA:
+       - grid-template-columns: Define las columnas.
+       - repeat(auto-fit, ...): "Crea tantas columnas como quepan".
+       - minmax(250px, 1fr): "Cada columna debe medir AL MENOS 250px, 
+         pero si sobra espacio, estírate (1fr) para ocuparlo todo".
+    */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px; /* Espacio entre filas y columnas */
+}
+
+.gallery-item {
+    overflow: hidden; /* Para que la imagen no se salga al hacer zoom */
+    border-radius: 10px; /* Bordes redonditos */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    cursor: pointer;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Asegura que la foto llene el cuadro sin deformarse */
+    transition: transform 0.3s ease; /* Prepara la animación */
+    display: block; /* Elimina espacio fantasma inferior */
+}
+
+/* Efecto Hover: Zoom al pasar el ratón */
+.gallery-item:hover img {
+    transform: scale(1.1);
+}
