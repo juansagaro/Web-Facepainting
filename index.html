@@ -12,7 +12,7 @@
 
     <header class="main-header">
         <div class="logo-container">
-    		<a href="#inicio"> <img src="assets/img/logo.jpg" alt="Logotipo Pintacaras Madrid" class="main-logo"></a>
+    		<a href="#inicio"> <img src="assets/icons/logo.jpg" alt="Logotipo Pintacaras Madrid" class="main-logo"></a>
 		</div>
         <nav class="main-nav">
             <ul>
@@ -27,7 +27,7 @@
     <main>
     	<section id="inicio" class="hero-section">
     		<div class="hero-content">
-    	    	<h1>Pintacaras y Arte Corporal en Madrid</h1>
+    	    	<h1>Body Art en Madrid</h1>
     	    		<p>
     	        		Transformamos tus <strong>fiestas infantiles</strong>, 
     	        		eventos de empresa y sesiones de <strong>Belly Painting</strong> 
@@ -44,13 +44,13 @@
 
     		    <div class="gallery-grid">
     		        <div class="gallery-item">
-    		            <img src="https://picsum.photos/400/400?random=1" alt="Niño pintado de tigre">
+    		            <img src="assets/img/Imagen1.jpg" alt="Niño pintado de tigre">
     		        </div>
     		        <div class="gallery-item">
-    		            <img src="https://picsum.photos/400/400?random=2" alt="Belly painting mandala">
+    		            <img src="assets/img/Imagen2.jpg" alt="Belly painting mandala">
     		        </div>
     		        <div class="gallery-item">
-    		            <img src="https://picsum.photos/400/400?random=3" alt="Maquillaje fantasía adulto">
+    		            <img src="assets/img/Imagen3.jpg" alt="Maquillaje fantasía adulto">
     		        </div>
     		        <div class="gallery-item">
     		            <img src="https://picsum.photos/400/400?random=4" alt="Fiesta de cumpleaños">
@@ -65,27 +65,106 @@
     		</div>
 		</section>
 
-        <section id="servicios" class="services">
-            <h3>Nuestros Servicios</h3>
-            <article class="service-card">
-                <h4>Infantil</h4>
-                <p>Fiestas de cumpleaños y eventos para niños.</p>
-            </article>
-            <article class="service-card">
-                <h4>Belly Painting</h4>
-                <p>Arte prenatal para futuras mamás.</p>
-            </article>
-            <article class="service-card">
-                <h4>Eventos Empresa</h4>
-                <p>Promociones y fiestas corporativas.</p>
-            </article>
-        </section>
+        <section id="servicios" class="services-section">
+    	<div class="container">
+    	    <h2>Nuestros Servicios</h2>
+    	    <p class="section-subtitle">Magia y color para todas las edades</p>
+	
+    	    <div class="services-grid">
+    	        <article class="service-card">
+    	            <div class="icon">🎨</div> <h4>Infantil</h4>
+    	            <p>Fiestas de cumpleaños, comuniones y eventos escolares. Utilizamos pinturas hipoalergénicas.</p>
+    	        </article>
+	
+    	        <article class="service-card">
+    	            <div class="icon">🤰</div>
+    	            <h4>Belly Painting</h4>
+    	            <p>Un recuerdo único de tu embarazo. Diseños personalizados 100% seguros para la mamá y el bebé.</p>
+    	        </article>
+	
+    	        <article class="service-card">
+    	            <div class="icon">💼</div>
+    	            <h4>Eventos Empresa</h4>
+    	            <p>Promociones de marca, cenas de empresa y team building. Dale color a tu marca.</p>
+    	        </article>
+    	    </div>
+    	</div>
+		</section>
+
+		<section id="contacto" class="contact-section">
+    		<div class="container contact-container">
+
+    		    <div class="contact-info">
+    		        <h2>Contacta con nosotros</h2>
+    		        <p>¿Tienes una fiesta en mente? Cuéntanos tu idea y te daremos presupuesto sin compromiso.</p>
+
+    		        <div class="contact-details">
+    		            <p><strong>Email:</strong> info@pintacaras-facepainting.com</p>
+    		            <p><strong>Teléfono:</strong> +34 600 000 000</p>
+    		            <p><strong>Zona:</strong> Comunidad de Madrid</p>
+    		        </div>
+    		    </div>
+
+    		    <form class="contact-form" action="#" method="POST">
+
+    		        <div class="form-group">
+    		            <label for="nombre">Tu Nombre</label>
+    		            <input type="text" id="nombre" name="nombre" placeholder="Ej: María García" required>
+    		        </div>
+
+    		        <div class="form-group">
+    		            <label for="email">Tu Correo Electrónico</label>
+    		            <input type="email" id="email" name="email" placeholder="maria@ejemplo.com" required>
+    		        </div>
+
+    		        <div class="form-group">
+    		            <label for="mensaje">¿Qué necesitas?</label>
+    		            <textarea id="mensaje" name="mensaje" rows="5" placeholder="Cuéntanos: fecha, lugar, número de niños..." required></textarea>
+    		        </div>
+
+    		        <button type="submit" class="btn btn-primary btn-block">Enviar Mensaje</button>
+    		    </form>
+
+    		</div>
+		</section>
     </main>
 
-    <footer>
-        <p>&copy; 2026 Pintacaras Facepainting - Madrid</p>
-    </footer>
+    <footer class="main-footer">
+	    <div class="container footer-grid">
+	
+	        <div class="footer-col">
+	            <h3>Pintacaras Madrid</h3>
+	            <p>Llevamos el arte y la fantasía a tus eventos desde 2014. Especialistas en hacer sonreír a grandes y pequeños.</p>
+	        </div>
 
-    <script src="js/main.js"></script>
+	        <div class="footer-col">
+	            <h3>Enlaces Rápidos</h3>
+	            <ul class="footer-links">
+	                <li><a href="#inicio">Inicio</a></li>
+	                <li><a href="#servicios">Servicios</a></li>
+	                <li><a href="#galeria">Galería</a></li>
+	                <li><a href="#contacto">Pedir Presupuesto</a></li>
+	            </ul>
+	        </div>
+
+	        <div class="footer-col">
+	            <h3>Síguenos</h3>
+	            <div class="social-links">
+	                <a href="#">Instagram</a>
+	                <a href="#">Facebook</a>
+	                <a href="#">TikTok</a>
+	            </div>
+	            <p class="legal-text">
+	                <a href="#">Política de Privacidad</a> | 
+	                <a href="#">Aviso Legal</a>
+	            </p>
+	        </div>
+	    </div>
+
+	    <div class="footer-bottom">
+	        <p>&copy; 2026 Pintacaras Facepainting Madrid. Todos los derechos reservados.</p>
+	        <p>Desarrollado con ❤️ por Juan Sagaro</p>
+	    </div>
+	</footer>
 </body>
 </html>

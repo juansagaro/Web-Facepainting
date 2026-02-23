@@ -75,6 +75,7 @@ nav a {
     align-items: center; /* Centrado vertical */
     justify-content: center; /* Centrado horizontal */
     
+	box-shadow: 0 4px 6px rgba(0,0,0,0.5); /* Sombra para dar profundidad y hacer que el texto resalte más sobre la foto */
     /* Truco Pro: Overlay oscuro para que el texto blanco se lea bien */
     position: relative;
     z-index: 1; /* Establecemos un contexto de apilamiento */
@@ -153,7 +154,7 @@ nav a {
 .gallery-item {
     overflow: hidden; /* Para que la imagen no se salga al hacer zoom */
     border-radius: 10px; /* Bordes redonditos */
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.5); /* Sombra suave para dar profundidad */
     cursor: pointer;
 }
 
@@ -168,4 +169,209 @@ nav a {
 /* Efecto Hover: Zoom al pasar el ratón */
 .gallery-item:hover img {
     transform: scale(1.1);
+}
+
+/* --- SECCIÓN SERVICIOS --- */
+.services-section {
+    padding: 4rem 2rem;
+    background-color: #ffffff; /* Fondo blanco */
+    text-align: center;
+}
+
+.services-grid {
+    display: grid;
+    /* Reutilizamos la lógica del Grid que aprendiste en la galería */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 2rem;
+}
+
+.service-card {
+    background: #ffffff;
+    padding: 2.5rem 1.5rem;
+    border-radius: 15px;
+    /* Sombra suave inicial (estado de reposo) */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    border: 1px solid rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Micro-interacción: Hover State */
+.service-card:hover {
+    transform: translateY(-10px); /* La tarjeta "flota" hacia arriba */
+    box-shadow: 0 20px 40px rgba(255, 64, 129, 0.15); /* La sombra crece y se tiñe de rosa */
+    border-color: var(--color-primary); /* Borde sutil rosa */
+}
+
+.service-card .icon {
+    font-size: 3rem; /* Tamaño del emoji */
+    margin-bottom: 1rem;
+    background-color: #fff0f5; /* Un rosa muy pálido de fondo para el icono */
+    width: 80px;
+    height: 80px;
+    line-height: 80px; /* Truco para centrar verticalmente texto en círculo */
+    border-radius: 50%;
+    margin-left: auto;
+    margin-right: auto; /* Centrado horizontal del icono */
+}
+
+.service-card h4 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--color-text);
+}
+
+.service-card p {
+    color: #666;
+    font-size: 0.95rem;
+}
+
+/* SECCIÓN CONTACTO */
+.contact-section {
+    padding: 4rem 2rem;
+    background-color: #ffffff;
+}
+
+/* Layout: Usamos Flexbox para poner Info a la izquierda y Form a la derecha */
+.contact-container {
+    display: flex;
+    flex-wrap: wrap; /* Si la pantalla es pequeña, baja el formulario debajo del texto */
+    gap: 4rem;
+    max-width: 1000px; /* Limitamos el ancho para que no se desparrame */
+    margin: 0 auto; /* Centramos el contenedor */
+}
+
+/* Hacemos que ambas columnas ocupen el mismo espacio (1 fracción cada una) */
+.contact-info, .contact-form {
+    flex: 1;
+    min-width: 300px; /* Evita que se aplasten demasiado */
+}
+
+/* Estilos de los Inputs */
+.form-group {
+    margin-bottom: 1.5rem; /* Espacio entre cajitas */
+}
+
+label {
+    display: block; /* Fuerza al label a ocupar su propia línea encima del input */
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: var(--color-text);
+}
+
+/* Estilo común para Input (caja de texto) y Textarea (caja grande) */
+input, textarea {
+    width: 100%; /* Ocupa todo el ancho de su columna */
+    padding: 10px;
+    border: 1px solid #ccc; /* Borde gris suave */
+    border-radius: 5px; /* Bordes redondeados */
+    font-family: inherit; /* Hereda la fuente de la web */
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+/* Efecto Focus: Cuando pinchas dentro para escribir */
+input:focus, textarea:focus {
+    outline: none; /* Quita el borde azul feo por defecto */
+    border-color: var(--color-primary); /* Pone nuestro color rosa */
+    box-shadow: 0 0 5px rgba(255, 64, 129, 0.2); /* Un brillito rosa */
+}
+
+/* Botón ancho completo */
+.btn-block {
+    width: 100%;
+    border: none;
+    cursor: pointer;
+    font-size: 1.1rem;
+}
+
+/* --- FOOTER --- */
+.main-footer {
+    background-color: #222222; /* Fondo oscuro casi negro (Elegancia) */
+    color: #ecf0f1; /* Texto blanco roto (menos agresivo que el blanco puro) */
+    padding-top: 4rem;
+}
+
+.footer-grid {
+    display: grid;
+    /* Grid responsive: 
+       Móvil: 1 columna
+       Tablet/PC: 3 columnas de igual ancho (1fr) */
+	text-align: center;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 3rem;
+    padding-bottom: 3rem;
+}
+
+.footer-col h3 {
+    color: var(--color-primary); /* Títulos en rosa */
+    margin-bottom: 1.5rem;
+    font-size: 1.3rem;
+}
+
+.footer-col p {
+    color: #bbbbbb; /* Gris claro para textos secundarios */
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+/* Estilos de la lista de enlaces */
+.footer-links {
+    list-style: none;
+}
+
+.footer-links li {
+    margin-bottom: 0.8rem;
+}
+
+.footer-links a {
+    color: #ecf0f1;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: var(--color-primary); /* Al pasar el ratón se pone rosa */
+    padding-left: 5px; /* Pequeño desplazamiento a la derecha */
+}
+
+/* Enlaces sociales (Botones simples por ahora) */
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 1.5rem;
+}
+
+.social-links a {
+    color: #ffffff;
+    text-decoration: none;
+    border: 1px solid #555;
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+    background-color: var(--color-primary);
+    border-color: var(--color-primary);
+}
+
+.legal-text a {
+    color: #777;
+    text-decoration: none;
+    font-size: 0.8rem;
+}
+
+/* Barra inferior */
+.footer-bottom {
+    background-color: #1a1a1a; /* Un tono más oscuro aún */
+    text-align: center;
+    padding: 1.5rem;
+    font-size: 0.85rem;
+    color: #777;
+    border-top: 1px solid #333;
 }
