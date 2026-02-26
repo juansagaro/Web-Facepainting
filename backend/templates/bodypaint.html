@@ -1,0 +1,103 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Body Painting Madrid | Maquillaje Corporal Artístico para Eventos | Body Art Madrid{% endblock %}
+
+{% block meta_description %}Servicio profesional de Body Painting en Madrid. Maquillaje corporal artístico para eventos corporativos, fiestas temáticas, discotecas, performances y presentaciones de marca.{% endblock %}
+
+{% block og_url %}https://bodyartmadrid.com/bodypaint.html{% endblock %}
+{% block og_title %}Body Painting Madrid | Body Art Madrid{% endblock %}
+{% block og_description %}Impacto visual y arte corporal profesional para eventos en Madrid. Diseños únicos para discotecas, lanzamientos de marca y performances.{% endblock %}
+
+{% block twitter_title %}Body Painting Madrid | Body Art Madrid{% endblock %}
+{% block twitter_description %}Impacto visual y arte corporal profesional para eventos en Madrid. Diseños únicos para discotecas, lanzamientos de marca y performances.{% endblock %}
+
+{% block canonical %}https://bodyartmadrid.com/bodypaint.html{% endblock %}
+
+{% block content %}
+        <!-- SERVICE HERO -->
+        <section class="service-hero">
+            <div class="container service-hero-content">
+                <div class="service-hero-text">
+                    <h1 class="reveal-fade">Body Painting <span class="text-accent">Artístico</span></h1>
+                    <p class="service-tagline reveal-fade reveal-delay-1">El body painting transforma el cuerpo humano en un lienzo vivo. Un espectáculo visual que genera impacto, atrae todas las miradas y convierte cualquier evento en una experiencia inolvidable.</p>
+                    <ul class="service-features-list reveal-fade reveal-delay-2">
+                        <li><span class="check">&#10003;</span> Diseños espectaculares de alto impacto</li>
+                        <li><span class="check">&#10003;</span> Pinturas corporales profesionales y seguras</li>
+                        <li><span class="check">&#10003;</span> Ideal para eventos nocturnos con luz UV</li>
+                        <li><span class="check">&#10003;</span> Modelos profesionales disponibles</li>
+                        <li><span class="check">&#10003;</span> Adaptable a temática corporativa o artística</li>
+                    </ul>
+                    <a href="{% url 'contacto' %}" class="btn btn-primary btn-hover-shine reveal-fade reveal-delay-3">Solicitar Presupuesto</a>
+                </div>
+                <div class="service-hero-image reveal-slide-up">
+                    <img src="{% static 'img/Servicios/ServicioBodyPaint.webp' %}"
+                         alt="Body painting artístico profesional para evento corporativo"
+                         width="600" height="400">
+                </div>
+            </div>
+        </section>
+
+        <!-- DETALLE DEL SERVICIO -->
+        <section class="section">
+            <div class="container service-detail-content">
+                <h2 class="section-title reveal-fade">El arte del <span class="text-accent">Body Painting</span></h2>
+                <p class="section-subtitle reveal-fade">Donde la piel se convierte en el lienzo más impresionante.</p>
+
+                <p class="reveal-fade">El body painting es mucho más que maquillaje: es una forma de arte en vivo que fusiona técnica pictórica, anatomía y creatividad. Nuestras artistas especializadas crean diseños que van desde lo abstracto y vanguardista hasta reproducciones hiperrealistas y temáticas corporativas.</p>
+
+                <p class="reveal-fade">Trabajamos con pinturas corporales profesionales de máxima calidad, incluyendo pigmentos reactivos a luz UV/neón para eventos nocturnos. Cada proyecto se planifica con detalle, desde la conceptualización del diseño hasta la ejecución durante el evento.</p>
+
+                <p class="reveal-fade"><strong>Servicios de Body Painting que ofrecemos:</strong></p>
+                <ul class="service-features-list reveal-fade">
+                    <li><span class="check">&#10003;</span> Body painting en vivo para discotecas y fiestas</li>
+                    <li><span class="check">&#10003;</span> Performances artísticas para galerías y museos</li>
+                    <li><span class="check">&#10003;</span> Branding corporal para lanzamientos de producto</li>
+                    <li><span class="check">&#10003;</span> Sesiones de fotos artísticas</li>
+                    <li><span class="check">&#10003;</span> Body painting UV/neón para eventos nocturnos</li>
+                    <li><span class="check">&#10003;</span> Eventos corporativos y presentaciones de marca</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- GALERIA PREVIEW -->
+        <section class="section section-alt">
+            <div class="container">
+                <h2 class="section-title reveal-fade">Nuestros <span class="text-accent">trabajos</span> de Body Painting</h2>
+                <p class="section-subtitle reveal-fade">Arte corporal que genera impacto visual en cada evento.</p>
+
+                <div class="service-gallery-preview">
+                    <div class="gallery-item reveal-slide-up">
+                        <img src="{% static 'img/Galería/BodyPaint/BodyPaint1.webp' %}" alt="Body painting artístico - diseño abstracto" loading="lazy" width="600" height="400">
+                        <div class="gallery-overlay"><span>Body Painting</span></div>
+                    </div>
+                    <div class="gallery-item reveal-slide-up reveal-delay-1">
+                        <img src="{% static 'img/Galería/BodyPaint/BodyPaint2.webp' %}" alt="Body painting para evento corporativo" loading="lazy" width="600" height="400">
+                        <div class="gallery-overlay"><span>Body Painting</span></div>
+                    </div>
+                    <div class="gallery-item reveal-slide-up reveal-delay-2">
+                        <img src="{% static 'img/Galería/BodyPaint/BodyPaint3.webp' %}" alt="Body painting artístico - diseño floral" loading="lazy" width="600" height="400">
+                        <div class="gallery-overlay"><span>Body Painting</span></div>
+                    </div>
+                    <div class="gallery-item reveal-slide-up reveal-delay-3">
+                        <img src="{% static 'img/Galería/BodyPaint/BodyPaint4.webp' %}" alt="Body painting para performance artística" loading="lazy" width="600" height="400">
+                        <div class="gallery-overlay"><span>Body Painting</span></div>
+                    </div>
+                </div>
+
+                <div class="text-center mt-xl">
+                    <a href="{% url 'galeria' %}" class="btn btn-outline btn-hover-slide reveal-fade">Ver toda la galería</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="cta-banner">
+            <div class="cta-banner-overlay"></div>
+            <div class="container cta-banner-content reveal-fade">
+                <h2>¿Quieres Body Painting en tu evento?</h2>
+                <p>Creamos diseños a medida que dejarán a todos con la boca abierta.</p>
+                <a href="{% url 'contacto' %}" class="btn btn-primary btn-hover-shine">Contactar ahora</a>
+            </div>
+        </section>
+{% endblock %}

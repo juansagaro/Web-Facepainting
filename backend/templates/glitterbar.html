@@ -1,0 +1,104 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Glitter Bar Madrid | Purpurina y Maquillaje Brillante para Eventos | Body Art Madrid{% endblock %}
+
+{% block meta_description %}Servicio de Glitter Bar para bodas y eventos en Madrid. Purpurina biodegradable, gemas faciales, maquillaje neón y glitter en gel artesanal. El rincón favorito de tus invitados.{% endblock %}
+
+{% block og_url %}https://bodyartmadrid.com/glitterbar.html{% endblock %}
+{% block og_title %}Glitter Bar Madrid | Purpurina para Bodas y Eventos{% endblock %}
+{% block og_description %}Glitter Bar con purpurina biodegradable, gemas faciales y maquillaje brillante para bodas y fiestas en Madrid.{% endblock %}
+
+{% block twitter_title %}Glitter Bar Madrid | Purpurina para Bodas y Eventos{% endblock %}
+{% block twitter_description %}Glitter Bar con purpurina biodegradable, gemas faciales y maquillaje brillante para bodas y fiestas en Madrid.{% endblock %}
+
+{% block canonical %}https://bodyartmadrid.com/glitterbar.html{% endblock %}
+
+{% block content %}
+        <!-- SERVICE HERO -->
+        <section class="service-hero">
+            <div class="container service-hero-content">
+                <div class="service-hero-text">
+                    <h1 class="reveal-fade">Glitter Bar <span class="text-accent">Madrid</span></h1>
+                    <p class="service-tagline reveal-fade reveal-delay-1">El rincón favorito de tus invitados. Un stand de maquillaje con purpurina biodegradable, gemas faciales, glitter en gel artesanal y maquillaje neón para bodas, fiestas y celebraciones nocturnas.</p>
+                    <ul class="service-features-list reveal-fade reveal-delay-2">
+                        <li><span class="check">&#10003;</span> Purpurina 100% biodegradable</li>
+                        <li><span class="check">&#10003;</span> Glitter en gel hecho a mano (sin pegamentos)</li>
+                        <li><span class="check">&#10003;</span> Gemas faciales y pedrería decorativa</li>
+                        <li><span class="check">&#10003;</span> Opción de maquillaje UV/neón</li>
+                        <li><span class="check">&#10003;</span> Stand decorado acorde a tu evento</li>
+                    </ul>
+                    <a href="{% url 'contacto' %}" class="btn btn-primary btn-hover-shine reveal-fade reveal-delay-3">Pedir presupuesto</a>
+                </div>
+                <div class="service-hero-image reveal-slide-up">
+                    <!-- Placeholder: no hay imagen específica de GlitterBar -->
+                    <img src="{% static 'img/Galería/BodyPaint/BodyPaint1.webp' %}"
+                         alt="Glitter Bar - maquillaje con purpurina y gemas faciales"
+                         width="600" height="400" loading="eager">
+                </div>
+            </div>
+        </section>
+
+        <!-- DETALLE -->
+        <section class="section">
+            <div class="container service-detail-content">
+                <h2 class="section-title reveal-fade">¿Cómo funciona el <span class="text-accent">Glitter Bar</span>?</h2>
+                <p class="section-subtitle reveal-fade">Montamos un rincón de brillo donde tus invitados se transforman con purpurina, gemas y color.</p>
+
+                <div class="features-grid">
+                    <div class="feature-card reveal-slide-up">
+                        <div class="feature-icon">&#10024;</div>
+                        <h3>Montaje del stand</h3>
+                        <p>Llegamos con todo el material y montamos un rincón decorado y acogedor, integrado en la estética de tu evento. Espejo con luces, mesa de productos y todo lo necesario.</p>
+                    </div>
+                    <div class="feature-card reveal-slide-up reveal-delay-1">
+                        <div class="feature-icon">&#128142;</div>
+                        <h3>Gemas y purpurina</h3>
+                        <p>Tus invitados eligen entre decenas de opciones: gemas faciales, purpurina biodegradable de distintos colores y tamaños, glitter en gel artesanal y maquillaje neón.</p>
+                    </div>
+                    <div class="feature-card reveal-slide-up reveal-delay-2">
+                        <div class="feature-icon">&#128248;</div>
+                        <h3>Diseño y aplicación</h3>
+                        <p>Nuestras maquilladoras crean looks personalizados en pocos minutos. Los invitados salen brillando, listos para disfrutar y hacerse fotos espectaculares.</p>
+                    </div>
+                    <div class="feature-card reveal-slide-up reveal-delay-3">
+                        <div class="feature-icon">&#127881;</div>
+                        <h3>Experiencia completa</h3>
+                        <p>El Glitter Bar no es solo maquillaje: es una actividad social que rompe el hielo, genera conversación y crea recuerdos brillantes para todos tus invitados.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TIPOS DE EVENTO -->
+        <section class="section section-alt">
+            <div class="container service-detail-content">
+                <h2 class="section-title reveal-fade">Perfecto para <span class="text-accent">cualquier celebración</span></h2>
+                <p class="section-subtitle reveal-fade">Adaptamos el Glitter Bar al estilo y la atmósfera de tu evento.</p>
+
+                <div class="intro-grid">
+                    <div class="intro-text">
+                        <h3 class="reveal-fade">Bodas y celebraciones</h3>
+                        <p class="intro-body reveal-fade reveal-delay-1">El Glitter Bar se ha convertido en uno de los servicios más demandados en bodas modernas. Es el complemento perfecto para el photocall, el cóctel o la fiesta nocturna. Purpurina dorada, gemas delicadas y maquillaje elegante que encaja a la perfección con la estética nupcial.</p>
+                        <p class="intro-body reveal-fade reveal-delay-2">También lo ofrecemos para despedidas de soltera, cumpleaños de adultos, fiestas privadas, festivales de música y eventos corporativos donde se busque una experiencia diferente y memorable.</p>
+                    </div>
+                    <div class="intro-image-wrapper reveal-slide-up">
+                        <div class="intro-glow"></div>
+                        <img src="{% static 'img/Galería/BodyPaint/BodyPaint3.webp' %}"
+                             alt="Glitter Bar en boda - invitadas con purpurina y gemas faciales"
+                             class="intro-img" loading="lazy" width="600" height="400">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="cta-banner">
+            <div class="cta-banner-overlay"></div>
+            <div class="container cta-banner-content reveal-fade">
+                <h2>¿Quieres un Glitter Bar en tu evento?</h2>
+                <p>Haz que tus invitados brillen. Literalmente.</p>
+                <a href="{% url 'contacto' %}" class="btn btn-primary btn-hover-shine">Reservar ahora</a>
+            </div>
+        </section>
+{% endblock %}

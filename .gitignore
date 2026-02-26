@@ -1,4 +1,40 @@
-.DS_Store       # Basura de Mac
-Thumbs.db       # Basura de Windows
-.vscode/        # Tu configuración personal del editor
-node_modules/   # (Lo usaremos en el futuro, mejor ponerlo ya)
+# === Sistema operativo ===
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# === Editor / IDE ===
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# === Node (futuro) ===
+node_modules/
+
+# === Python / Django ===
+__pycache__/
+*.py[cod]
+*.pyo
+*.egg-info/
+*.egg
+dist/
+build/
+
+# Base de datos de desarrollo
+backend/db.sqlite3
+
+# Archivos estáticos recopilados para producción
+backend/staticfiles/
+
+# Archivos subidos por el admin (galería, etc.)
+backend/media/
+
+# Variables de entorno (nunca subir secretos)
+.env
+.env.*
+
+# Entornos virtuales
+venv/
+env/
+.venv/

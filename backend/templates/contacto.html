@@ -1,0 +1,127 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Contacto | Body Art Madrid - Reserva tu Evento{% endblock %}
+{% block meta_description %}Contacta con Body Art Madrid para reservar tu servicio de Facepainting, Body Painting o Glitter Bar. Presupuesto sin compromiso para bodas y eventos en Madrid.{% endblock %}
+
+{% block og_url %}https://bodyartmadrid.com/contacto.html{% endblock %}
+{% block og_title %}Contacto | Body Art Madrid{% endblock %}
+{% block og_description %}Pide presupuesto sin compromiso para tu evento en Madrid.{% endblock %}
+
+{% block twitter_title %}Contacto | Body Art Madrid{% endblock %}
+{% block twitter_description %}Pide presupuesto sin compromiso para tu evento en Madrid.{% endblock %}
+
+{% block canonical %}https://bodyartmadrid.com/contacto.html{% endblock %}
+
+{% block content %}
+        <!-- PAGE HERO -->
+        <section class="page-hero">
+            <div class="container">
+                <h1 class="reveal-fade">Contacta con <span class="text-accent">nosotros</span></h1>
+                <p class="reveal-fade reveal-delay-1">Cuéntanos tu idea y la hacemos realidad. Presupuesto sin compromiso.</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container contact-page-grid">
+                <!-- INFO DE CONTACTO -->
+                <div class="contact-info reveal-slide-up">
+                    <div class="contact-info-card">
+                        <div class="contact-info-item">
+                            <div class="contact-info-icon">&#9993;</div>
+                            <div>
+                                <h3>Email</h3>
+                                <a href="mailto:info@bodyartmadrid.com">info@bodyartmadrid.com</a>
+                            </div>
+                        </div>
+                        <div class="contact-info-item">
+                            <div class="contact-info-icon">&#9742;</div>
+                            <div>
+                                <h3>Teléfono / WhatsApp</h3>
+                                <a href="tel:+34600000000">+34 600 000 000</a>
+                            </div>
+                        </div>
+                        <div class="contact-info-item">
+                            <div class="contact-info-icon">&#9906;</div>
+                            <div>
+                                <h3>Ubicación</h3>
+                                <p>Madrid, España<br>Nos desplazamos a tu evento</p>
+                            </div>
+                        </div>
+                        <div class="contact-info-item">
+                            <div class="contact-info-icon">&#128340;</div>
+                            <div>
+                                <h3>Horario de atención</h3>
+                                <p>Lunes a Viernes: 10:00 - 20:00<br>Fines de semana: solo eventos</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-social">
+                        <h3>Síguenos</h3>
+                        <div class="social-icons social-icons-large">
+                            <a href="#" target="_blank" rel="noopener" aria-label="Instagram">Instagram</a>
+                            <a href="#" target="_blank" rel="noopener" aria-label="Facebook">Facebook</a>
+                            <a href="#" target="_blank" rel="noopener" aria-label="WhatsApp">WhatsApp</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FORMULARIO -->
+                <form class="contact-form reveal-slide-up reveal-delay-1" action="{% url 'contacto' %}" method="POST" novalidate>
+                    {% csrf_token %}
+
+                    {# Errores de validación del servidor #}
+                    {% if errors %}
+                    <div class="form-errors" role="alert">
+                        <ul>
+                            {% for error in errors %}
+                            <li>{{ error }}</li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                    {% endif %}
+
+                    <h2>Envíanos un mensaje</h2>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="contact-name">Nombre *</label>
+                            <input type="text" id="contact-name" name="name" placeholder="Tu nombre" required autocomplete="name" value="{{ form_data.name|default:'' }}">
+                        </div>
+                        <div class="form-group">
+                            <label for="contact-email">Email *</label>
+                            <input type="email" id="contact-email" name="email" placeholder="tu@email.com" required autocomplete="email" value="{{ form_data.email|default:'' }}">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="contact-phone">Teléfono <span class="optional">(opcional)</span></label>
+                            <input type="tel" id="contact-phone" name="phone" placeholder="+34 600 000 000" autocomplete="tel" value="{{ form_data.phone|default:'' }}">
+                        </div>
+                        <div class="form-group">
+                            <label for="contact-event">Tipo de evento</label>
+                            <select id="contact-event" name="event-type">
+                                <option value="" disabled {% if not form_data.event_type %}selected{% endif %}>Selecciona...</option>
+                                <option value="boda" {% if form_data.event_type == 'boda' %}selected{% endif %}>Boda</option>
+                                <option value="cumpleanos" {% if form_data.event_type == 'cumpleanos' %}selected{% endif %}>Cumpleaños infantil</option>
+                                <option value="comunion" {% if form_data.event_type == 'comunion' %}selected{% endif %}>Comunión</option>
+                                <option value="corporativo" {% if form_data.event_type == 'corporativo' %}selected{% endif %}>Evento corporativo</option>
+                                <option value="festival" {% if form_data.event_type == 'festival' %}selected{% endif %}>Festival / Fiesta</option>
+                                <option value="sesion" {% if form_data.event_type == 'sesion' %}selected{% endif %}>Sesión de fotos</option>
+                                <option value="otro" {% if form_data.event_type == 'otro' %}selected{% endif %}>Otro</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="contact-date">Fecha del evento <span class="optional">(opcional)</span></label>
+                        <input type="date" id="contact-date" name="event-date" value="{{ form_data.event_date|default:'' }}">
+                    </div>
+                    <div class="form-group">
+                        <label for="contact-message">Mensaje *</label>
+                        <textarea id="contact-message" name="message" rows="5" placeholder="Cuéntanos los detalles: lugar, número de invitados, servicios que te interesan..." required>{{ form_data.message|default:'' }}</textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-submit btn-hover-shine">Enviar Solicitud</button>
+                </form>
+            </div>
+        </section>
+{% endblock %}

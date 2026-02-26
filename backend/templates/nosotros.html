@@ -1,0 +1,91 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Sobre Nosotros | Body Art Madrid - Maquillaje Artístico Profesional{% endblock %}
+
+{% block meta_description %}Conoce al equipo de Body Art Madrid. Más de 10 años de experiencia en maquillaje artístico, facepainting y body painting para eventos en Madrid.{% endblock %}
+
+{% block og_url %}https://bodyartmadrid.com/nosotros.html{% endblock %}
+{% block og_title %}Sobre Nosotros | Body Art Madrid{% endblock %}
+{% block og_description %}Conoce al equipo detrás de Body Art Madrid. Pasión, arte y profesionalismo.{% endblock %}
+
+{% block twitter_title %}Sobre Nosotros | Body Art Madrid{% endblock %}
+{% block twitter_description %}Conoce al equipo detrás de Body Art Madrid. Pasión, arte y profesionalismo.{% endblock %}
+
+{% block canonical %}https://bodyartmadrid.com/nosotros.html{% endblock %}
+
+{% block content %}
+        <!-- PAGE HERO -->
+        <section class="page-hero">
+            <div class="container">
+                <h1 class="reveal-fade">Sobre <span class="text-accent">Nosotros</span></h1>
+                <p class="reveal-fade reveal-delay-1">Conoce al equipo que convierte cada evento en una experiencia artística.</p>
+            </div>
+        </section>
+
+        <!-- HISTORIA -->
+        <section class="section">
+            <div class="container intro-grid">
+                <div class="intro-text">
+                    <h2 class="section-title text-left reveal-fade">Más que maquillaje, creamos <span class="text-accent">experiencias</span></h2>
+                    <p class="intro-body reveal-fade reveal-delay-1">
+                        Con más de 10 años de experiencia en el sector del maquillaje artístico, Body Art Madrid nació de la pasión por convertir la piel en un lienzo y los eventos en recuerdos inolvidables.
+                    </p>
+                    <p class="intro-body reveal-fade reveal-delay-2">
+                        Nos especializamos en iluminar rostros y crear atmósferas mágicas. Utilizamos productos hipoalergénicos de alta gama, asegurando que cada trazo sea una obra de arte segura, resistente y diseñada para resaltar tu belleza y la temática de tu evento.
+                    </p>
+                    <p class="intro-body reveal-fade reveal-delay-3">
+                        Desde fiestas infantiles hasta bodas de ensueño, pasando por eventos corporativos y festivales, nuestro equipo aporta profesionalismo, creatividad y un trato cercano que nos distingue.
+                    </p>
+                </div>
+                <div class="intro-image-wrapper reveal-slide-up">
+                    <div class="intro-glow"></div>
+                    <img src="{% static 'img/Banner/Banner2.webp' %}"
+                         alt="Equipo de Body Art Madrid preparando materiales para un evento"
+                         class="intro-img"
+                         loading="lazy" width="800" height="600">
+                </div>
+            </div>
+        </section>
+
+        <!-- VALORES -->
+        <section class="section section-alt">
+            <div class="container">
+                <h2 class="section-title reveal-fade">Nuestros <span class="text-accent">valores</span></h2>
+                <p class="section-subtitle reveal-fade">Lo que nos define como profesionales y como personas.</p>
+
+                <div class="features-grid">
+                    <div class="feature-card reveal-slide-up">
+                        <div class="feature-icon">&#127912;</div>
+                        <h3>Creatividad sin límites</h3>
+                        <p>Cada diseño es único. No usamos plantillas: cada trazo nace de la imaginación y la técnica.</p>
+                    </div>
+                    <div class="feature-card reveal-slide-up reveal-delay-1">
+                        <div class="feature-icon">&#128155;</div>
+                        <h3>Compromiso y cercanía</h3>
+                        <p>Tratamos cada evento como si fuera el nuestro. Tu tranquilidad y satisfacción son nuestra prioridad.</p>
+                    </div>
+                    <div class="feature-card reveal-slide-up reveal-delay-2">
+                        <div class="feature-icon">&#127793;</div>
+                        <h3>Sostenibilidad</h3>
+                        <p>Productos veganos, biodegradables y cruelty-free. Belleza responsable con el medio ambiente.</p>
+                    </div>
+                    <div class="feature-card reveal-slide-up reveal-delay-3">
+                        <div class="feature-icon">&#128218;</div>
+                        <h3>Formación continua</h3>
+                        <p>Nos mantenemos al día con las últimas tendencias y técnicas del maquillaje artístico internacional.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="cta-banner">
+            <div class="cta-banner-overlay"></div>
+            <div class="container cta-banner-content reveal-fade">
+                <h2>¿Quieres conocernos en persona?</h2>
+                <p>Cuéntanos tu proyecto y te asesoramos sin compromiso.</p>
+                <a href="{% url 'contacto' %}" class="btn btn-primary btn-hover-shine">Contactar</a>
+            </div>
+        </section>
+{% endblock %}

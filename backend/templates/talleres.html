@@ -1,0 +1,104 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Talleres y Cursos de Maquillaje Artístico Madrid | Body Art Madrid{% endblock %}
+
+{% block meta_description %}Talleres y cursos intensivos de maquillaje artístico, facepainting y body painting en Madrid. Formación profesional para particulares, academias y centros de formación.{% endblock %}
+
+{% block og_url %}https://bodyartmadrid.com/talleres.html{% endblock %}
+{% block og_title %}Talleres y Cursos | Body Art Madrid{% endblock %}
+{% block og_description %}Aprende maquillaje artístico profesional. Cursos de facepainting, body painting y técnicas avanzadas en Madrid.{% endblock %}
+
+{% block twitter_title %}Talleres y Cursos | Body Art Madrid{% endblock %}
+{% block twitter_description %}Aprende maquillaje artístico profesional. Cursos de facepainting, body painting y técnicas avanzadas en Madrid.{% endblock %}
+
+{% block canonical %}https://bodyartmadrid.com/talleres.html{% endblock %}
+
+{% block content %}
+        <!-- SERVICE HERO -->
+        <section class="service-hero">
+            <div class="container service-hero-content">
+                <div class="service-hero-text">
+                    <h1 class="reveal-fade">Talleres y <span class="text-accent">Cursos</span></h1>
+                    <p class="service-tagline reveal-fade reveal-delay-1">Formación profesional en maquillaje artístico, facepainting y body painting. Cursos intensivos y talleres prácticos para particulares, animadores, academias y centros de formación en Madrid.</p>
+                    <ul class="service-features-list reveal-fade reveal-delay-2">
+                        <li><span class="check">&#10003;</span> Grupos reducidos y atención personalizada</li>
+                        <li><span class="check">&#10003;</span> Material de prácticas incluido</li>
+                        <li><span class="check">&#10003;</span> Certificado de asistencia</li>
+                        <li><span class="check">&#10003;</span> Niveles principiante a avanzado</li>
+                        <li><span class="check">&#10003;</span> Posibilidad de formación a medida</li>
+                    </ul>
+                    <a href="{% url 'contacto' %}" class="btn btn-primary btn-hover-shine reveal-fade reveal-delay-3">Solicitar información</a>
+                </div>
+                <div class="service-hero-image reveal-slide-up">
+                    <img src="{% static 'img/Servicios/ServicioTalleres.webp' %}"
+                         alt="Taller de maquillaje artístico - alumnos practicando facepainting"
+                         width="600" height="400" loading="eager">
+                </div>
+            </div>
+        </section>
+
+        <!-- TIPOS DE CURSOS -->
+        <section class="section">
+            <div class="container service-detail-content">
+                <h2 class="section-title reveal-fade">Nuestros <span class="text-accent">programas formativos</span></h2>
+                <p class="section-subtitle reveal-fade">Aprende de profesionales con más de 10 años de experiencia en eventos reales.</p>
+
+                <div class="features-grid">
+                    <div class="feature-card reveal-slide-up">
+                        <div class="feature-icon">&#127912;</div>
+                        <h3>Facepainting Infantil</h3>
+                        <p>Técnicas de pintacaras para fiestas infantiles: animales, superhéroes, princesas, flores. Aprende a maquillar rápido, seguro y con acabados profesionales.</p>
+                    </div>
+                    <div class="feature-card reveal-slide-up reveal-delay-1">
+                        <div class="feature-icon">&#128123;</div>
+                        <h3>Halloween y Fantasía</h3>
+                        <p>Técnicas avanzadas de maquillaje de terror y fantasía: calaveras, efectos especiales, heridas, catrinas y personajes de ficción con acabado realista.</p>
+                    </div>
+                    <div class="feature-card reveal-slide-up reveal-delay-2">
+                        <div class="feature-icon">&#127752;</div>
+                        <h3>Body Painting</h3>
+                        <p>Fundamentos del Body Painting: mezcla de colores, cobertura completa, diseños sobre el cuerpo, uso de aerógrafo y técnicas de fijación profesional.</p>
+                    </div>
+                    <div class="feature-card reveal-slide-up reveal-delay-3">
+                        <div class="feature-icon">&#128188;</div>
+                        <h3>Formación para empresas</h3>
+                        <p>Programas a medida para equipos de animación, agencias de eventos y centros de ocio. Formación práctica adaptada a las necesidades de tu equipo.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- COMO FUNCIONAN -->
+        <section class="section section-alt">
+            <div class="container service-detail-content">
+                <h2 class="section-title reveal-fade">¿Cómo funcionan nuestros <span class="text-accent">talleres</span>?</h2>
+                <p class="section-subtitle reveal-fade">Formación 100% práctica donde aprenderás haciendo desde el primer minuto.</p>
+
+                <div class="intro-grid">
+                    <div class="intro-text">
+                        <h3 class="reveal-fade">Metodología práctica</h3>
+                        <p class="intro-body reveal-fade reveal-delay-1">Nuestros cursos combinan una breve parte teórica (materiales, colorimetría, seguridad) con una extensa parte práctica donde cada alumno trabaja sobre modelos reales. Todo el material está incluido: pinturas profesionales, pinceles, esponjas y complementos.</p>
+                        <p class="intro-body reveal-fade reveal-delay-2">Los grupos son reducidos (máximo 8-10 alumnos) para garantizar atención individualizada. Al finalizar, cada alumno recibe un certificado de asistencia y una guía de recursos para seguir practicando por su cuenta.</p>
+                        <p class="intro-body reveal-fade reveal-delay-3">También ofrecemos formación in-company y talleres corporativos de team building, donde los participantes se maquillan entre sí en un ambiente divertido y creativo.</p>
+                    </div>
+                    <div class="intro-image-wrapper reveal-slide-up">
+                        <div class="intro-glow"></div>
+                        <img src="{% static 'img/Servicios/ServicioTalleres.webp' %}"
+                             alt="Alumna practicando facepainting en taller de Body Art Madrid"
+                             class="intro-img" loading="lazy" width="600" height="400">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="cta-banner">
+            <div class="cta-banner-overlay"></div>
+            <div class="container cta-banner-content reveal-fade">
+                <h2>¿Te interesa formarte en maquillaje artístico?</h2>
+                <p>Consulta nuestras próximas fechas y plazas disponibles.</p>
+                <a href="{% url 'contacto' %}" class="btn btn-primary btn-hover-shine">Solicitar información</a>
+            </div>
+        </section>
+{% endblock %}

@@ -1,0 +1,134 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Galería | Body Art Madrid - Facepainting, Body Painting y Glitter Bar{% endblock %}
+
+{% block meta_description %}Explora nuestra galería de trabajos de Facepainting, Body Painting, Belly Painting y Glitter Bar. Maquillaje artístico profesional en Madrid.{% endblock %}
+
+{% block og_url %}https://bodyartmadrid.com/galeria.html{% endblock %}
+{% block og_title %}Galería | Body Art Madrid{% endblock %}
+{% block og_description %}Descubre nuestros mejores trabajos de maquillaje artístico para eventos.{% endblock %}
+
+{% block twitter_title %}Galería | Body Art Madrid{% endblock %}
+{% block twitter_description %}Descubre nuestros mejores trabajos de maquillaje artístico para eventos.{% endblock %}
+
+{% block canonical %}https://bodyartmadrid.com/galeria.html{% endblock %}
+
+{% block content %}
+        <!-- PAGE HERO -->
+        <section class="page-hero">
+            <div class="container">
+                <h1 class="reveal-fade">Nuestra <span class="text-accent">Galería</span></h1>
+                <p class="reveal-fade reveal-delay-1">Cada imagen cuenta una historia. Explora nuestros mejores trabajos.</p>
+            </div>
+        </section>
+
+        <!-- FILTROS -->
+        <section class="section">
+            <div class="container">
+                <div class="gallery-filters reveal-fade">
+                    <button class="filter-btn active" data-filter="all">Todos</button>
+                    <button class="filter-btn" data-filter="facepainting">Facepainting</button>
+                    <button class="filter-btn" data-filter="halloween">Halloween</button>
+                    <button class="filter-btn" data-filter="bodypaint">Body Paint</button>
+                    <button class="filter-btn" data-filter="bellypaint">Belly Paint</button>
+                </div>
+
+                <!-- GALERIA -->
+                <div class="gallery-masonry">
+                    <!-- Face Painting Infantil -->
+                    <div class="gallery-item reveal-slide-up" data-category="facepainting">
+                        <img src="{% static 'img/Galería/FacePaintInfantil/FacePaintInfantil1.webp' %}" alt="Facepainting infantil - diseño de mariposa" loading="lazy" width="600" height="400">
+                        <div class="gallery-overlay"><span>Facepainting Infantil</span></div>
+                    </div>
+                    <div class="gallery-item reveal-slide-up" data-category="facepainting">
+                        <img src="{% static 'img/Galería/FacePaintInfantil/FacePaintInfantil2.webp' %}" alt="Facepainting infantil - diseño de tigre" loading="lazy" width="600" height="400">
+                        <div class="gallery-overlay"><span>Facepainting Infantil</span></div>
+                    </div>
+                    <div class="gallery-item reveal-slide-up" data-category="facepainting">
+                        <img src="{% static 'img/Galería/FacePaintInfantil/FacePaintInfantil3.webp' %}" alt="Facepainting infantil - diseño de superhéroe" loading="lazy" width="600" height="400">
+                        <div class="gallery-overlay"><span>Facepainting Infantil</span></div>
+                    </div>
+                    <div class="gallery-item reveal-slide-up" data-category="facepainting">
+                        <img src="{% static 'img/Galería/FacePaintInfantil/FacePaintInfantil4.webp' %}" alt="Facepainting infantil - diseño de princesa" loading="lazy" width="600" height="400">
+                        <div class="gallery-overlay"><span>Facepainting Infantil</span></div>
+                    </div>
+
+                    <!-- Face Painting Halloween -->
+                    <div class="gallery-item reveal-slide-up" data-category="halloween">
+                        <img src="{% static 'img/Galería/FacePaintHalloween/FacePaintHalloween1.webp' %}" alt="Maquillaje Halloween - calavera artística" loading="lazy" width="600" height="400">
+                        <div class="gallery-overlay"><span>Halloween</span></div>
+                    </div>
+                    <div class="gallery-item reveal-slide-up" data-category="halloween">
+                        <img src="{% static 'img/Galería/FacePaintHalloween/FacePaintHalloween2.webp' %}" alt="Maquillaje Halloween - zombie realista" loading="lazy" width="600" height="400">
+                        <div class="gallery-overlay"><span>Halloween</span></div>
+                    </div>
+                    <div class="gallery-item reveal-slide-up" data-category="halloween">
+                        <img src="{% static 'img/Galería/FacePaintHalloween/FacePaintHalloween3.webp' %}" alt="Maquillaje Halloween - bruja de fantasía" loading="lazy" width="600" height="400">
+                        <div class="gallery-overlay"><span>Halloween</span></div>
+                    </div>
+                    <div class="gallery-item reveal-slide-up" data-category="halloween">
+                        <img src="{% static 'img/Galería/FacePaintHalloween/FacePaintHalloween4.webp' %}" alt="Maquillaje Halloween - catrina día de muertos" loading="lazy" width="600" height="400">
+                        <div class="gallery-overlay"><span>Halloween</span></div>
+                    </div>
+
+                    <!-- Body Paint -->
+                    <div class="gallery-item reveal-slide-up" data-category="bodypaint">
+                        <img src="{% static 'img/Galería/BodyPaint/BodyPaint1.webp' %}" alt="Body painting artístico - diseño abstracto" loading="lazy" width="600" height="400">
+                        <div class="gallery-overlay"><span>Body Painting</span></div>
+                    </div>
+                    <div class="gallery-item reveal-slide-up" data-category="bodypaint">
+                        <img src="{% static 'img/Galería/BodyPaint/BodyPaint2.webp' %}" alt="Body painting para evento corporativo" loading="lazy" width="600" height="400">
+                        <div class="gallery-overlay"><span>Body Painting</span></div>
+                    </div>
+                    <div class="gallery-item reveal-slide-up" data-category="bodypaint">
+                        <img src="{% static 'img/Galería/BodyPaint/BodyPaint3.webp' %}" alt="Body painting artístico - diseño floral" loading="lazy" width="600" height="400">
+                        <div class="gallery-overlay"><span>Body Painting</span></div>
+                    </div>
+                    <div class="gallery-item reveal-slide-up" data-category="bodypaint">
+                        <img src="{% static 'img/Galería/BodyPaint/BodyPaint4.webp' %}" alt="Body painting para performance artística" loading="lazy" width="600" height="400">
+                        <div class="gallery-overlay"><span>Body Painting</span></div>
+                    </div>
+
+                    <!-- Belly Paint -->
+                    <div class="gallery-item reveal-slide-up" data-category="bellypaint">
+                        <img src="{% static 'img/Galería/BellyPaint/BellyPaint1.webp' %}" alt="Belly painting para embarazada - diseño floral" loading="lazy" width="600" height="400">
+                        <div class="gallery-overlay"><span>Belly Painting</span></div>
+                    </div>
+                    <div class="gallery-item reveal-slide-up" data-category="bellypaint">
+                        <img src="{% static 'img/Galería/BellyPaint/BellyPaint2.webp' %}" alt="Belly painting para embarazada - diseño infantil" loading="lazy" width="600" height="400">
+                        <div class="gallery-overlay"><span>Belly Painting</span></div>
+                    </div>
+                    <div class="gallery-item reveal-slide-up" data-category="bellypaint">
+                        <img src="{% static 'img/Galería/BellyPaint/BellyPaint3.webp' %}" alt="Belly painting artístico para sesión de fotos" loading="lazy" width="600" height="400">
+                        <div class="gallery-overlay"><span>Belly Painting</span></div>
+                    </div>
+                    <div class="gallery-item reveal-slide-up" data-category="bellypaint">
+                        <img src="{% static 'img/Galería/BellyPaint/BellyPaint4.webp' %}" alt="Belly painting para baby shower" loading="lazy" width="600" height="400">
+                        <div class="gallery-overlay"><span>Belly Painting</span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="cta-banner">
+            <div class="cta-banner-overlay"></div>
+            <div class="container cta-banner-content reveal-fade">
+                <h2>¿Te gusta lo que ves?</h2>
+                <p>Deja que creemos algo único para tu evento.</p>
+                <a href="{% url 'contacto' %}" class="btn btn-primary btn-hover-shine">Pedir presupuesto</a>
+            </div>
+        </section>
+{% endblock %}
+
+{% block extra_body %}
+    <!-- LIGHTBOX Modal -->
+    <div id="lightbox" class="lightbox" role="dialog" aria-label="Visor de imágenes">
+        <button class="lightbox-close" aria-label="Cerrar visor">&times;</button>
+        <button class="lightbox-prev" aria-label="Imagen anterior">&#10094;</button>
+        <button class="lightbox-next" aria-label="Imagen siguiente">&#10095;</button>
+        <img class="lightbox-img" src="" alt="">
+        <div class="lightbox-caption"></div>
+    </div>
+{% endblock %}

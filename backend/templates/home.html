@@ -1,0 +1,300 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Body Art Madrid | Facepainting, Body Painting y Glitter Bar para Eventos{% endblock %}
+
+{% block meta_description %}Servicios profesionales de Facepainting, Body Painting, Belly Painting y Glitter Bar en Madrid. Bodas, fiestas infantiles y eventos corporativos. Reserva ahora.{% endblock %}
+
+{% block og_url %}https://bodyartmadrid.com/{% endblock %}
+{% block og_title %}Body Art Madrid | Facepainting y Glitter Bar para Eventos{% endblock %}
+{% block og_description %}Dale un toque de color y brillo a tu evento. Especialistas en bodas, fiestas y eventos corporativos en Madrid.{% endblock %}
+
+{% block twitter_title %}Body Art Madrid | Facepainting y Glitter Bar{% endblock %}
+{% block twitter_description %}Especialistas en maquillaje artístico para eventos en Madrid.{% endblock %}
+
+{% block canonical %}https://bodyartmadrid.com/{% endblock %}
+
+{% block schema_org %}
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Body Art Madrid",
+    "description": "Servicios profesionales de Facepainting, Body Painting y Glitter Bar para eventos en Madrid.",
+    "url": "https://bodyartmadrid.com",
+    "telephone": "+34600000000",
+    "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Madrid",
+        "addressCountry": "ES"
+    },
+    "image": "https://bodyartmadrid.com/assets/img/og-image.jpg",
+    "priceRange": "$$",
+    "areaServed": { "@type": "City", "name": "Madrid" }
+}
+</script>
+{% endblock %}
+
+{% block header_class %}{% endblock %}
+
+{% block content %}
+
+        <!-- HERO -->
+        <section id="hero" class="hero-section">
+            <div class="container hero-content">
+                <p class="hero-tagline reveal-fade">Maquillaje artístico profesional en Madrid</p>
+                <h1 class="reveal-fade reveal-delay-1">Convertimos la piel en <span class="text-accent">arte</span></h1>
+                <p class="hero-description reveal-fade reveal-delay-2">Especialistas en Facepainting, Body Painting y Glitter Bar para bodas, fiestas infantiles, eventos corporativos y celebraciones únicas.</p>
+                <div class="hero-buttons reveal-fade reveal-delay-3">
+                    <a href="{% url 'contacto' %}" class="btn btn-primary btn-hover-shine">Reserva tu fecha</a>
+                    <a href="#services" class="btn btn-secondary btn-hover-slide">Descubre más</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- SERVICIOS -->
+        <section id="services" class="section">
+            <div class="container">
+                <h2 class="section-title reveal-fade">Nuestros <span class="text-accent">Servicios</span></h2>
+                <p class="section-subtitle reveal-fade">Cada evento merece un toque de magia. Descubre cómo podemos transformar el tuyo.</p>
+
+                <div class="services-grid">
+                    <!-- Facepainting -->
+                    <a href="{% url 'facepainting' %}" class="service-card reveal-slide-up">
+                        <div class="service-card-img-wrapper">
+                            <img src="{% static 'img/Galería/FacePaintInfantil/FacePaintInfantil1.webp' %}"
+                                 alt="Niña con maquillaje facial artístico de mariposa"
+                                 class="service-card-img"
+                                 loading="lazy" width="600" height="400">
+                        </div>
+                        <div class="service-card-body">
+                            <h3>Facepainting</h3>
+                            <p>Diseños mágicos para los más pequeños y adultos. Pintacaras profesional para cumpleaños, comuniones, Halloween y eventos temáticos.</p>
+                            <span class="service-card-link">Saber más <span class="arrow">&#8594;</span></span>
+                        </div>
+                    </a>
+
+                    <!-- Body Painting -->
+                    <a href="{% url 'bodypaint' %}" class="service-card reveal-slide-up reveal-delay-1">
+                        <div class="service-card-img-wrapper">
+                            <img src="{% static 'img/Servicios/ServicioBodyPaint.webp' %}"
+                                 alt="Body painting artístico para evento corporativo"
+                                 class="service-card-img"
+                                 loading="lazy" width="600" height="400">
+                        </div>
+                        <div class="service-card-body">
+                            <h3>Body Painting</h3>
+                            <p>Impacto visual y presencia artística. Perfecto para discotecas, presentaciones de marca, fiestas temáticas y eventos promocionales.</p>
+                            <span class="service-card-link">Saber más <span class="arrow">&#8594;</span></span>
+                        </div>
+                    </a>
+
+                    <!-- Glitter Bar -->
+                    <a href="{% url 'glitterbar' %}" class="service-card reveal-slide-up reveal-delay-2">
+                        <div class="service-card-img-wrapper">
+                            <img src="{% static 'img/Galería/BodyPaint/BodyPaint1.webp' %}"
+                                 alt="Glitter Bar con purpurina y gemas faciales para boda"
+                                 class="service-card-img"
+                                 loading="lazy" width="600" height="400">
+                        </div>
+                        <div class="service-card-body">
+                            <h3>Glitter Bar</h3>
+                            <p>El rincón favorito de tus invitados. Glitter biodegradable, gemas faciales y maquillaje neón para bodas y celebraciones nocturnas.</p>
+                            <span class="service-card-link">Saber más <span class="arrow">&#8594;</span></span>
+                        </div>
+                    </a>
+
+                    <!-- Talleres -->
+                    <a href="{% url 'talleres' %}" class="service-card reveal-slide-up reveal-delay-3">
+                        <div class="service-card-img-wrapper">
+                            <img src="{% static 'img/Servicios/ServicioTalleres.webp' %}"
+                                 alt="Taller de maquillaje artístico con alumnos"
+                                 class="service-card-img"
+                                 loading="lazy" width="600" height="400">
+                        </div>
+                        <div class="service-card-body">
+                            <h3>Talleres y Cursos</h3>
+                            <p>Aprende las técnicas del maquillaje artístico profesional. Cursos intensivos para particulares, academias y centros de formación.</p>
+                            <span class="service-card-link">Saber más <span class="arrow">&#8594;</span></span>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Servicios externos (Tatuajes y Belly) -->
+                <div class="services-external reveal-fade">
+                    <p class="services-external-text">También ofrecemos <strong>Tatuajes Temporales</strong> y <strong>Belly Painting</strong> a través de nuestros colaboradores.</p>
+                    <div class="services-external-links">
+                        <a href="https://tatuajestemporaleseventos.com" target="_blank" rel="noopener" class="btn btn-outline btn-hover-slide">Tatuajes Temporales <span class="external-icon">&#8599;</span></a>
+                        <a href="https://bellypaintingmadrid.com" target="_blank" rel="noopener" class="btn btn-outline btn-hover-slide">Belly Painting <span class="external-icon">&#8599;</span></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- POR QUE ELEGIRNOS (mini-sección inspirada en Glitter Bar Madrid) -->
+        <section id="why-us" class="section section-alt">
+            <div class="container">
+                <h2 class="section-title reveal-fade">¿Por qué elegir <span class="text-accent">Body Art Madrid</span>?</h2>
+                <p class="section-subtitle reveal-fade">Más de 10 años creando experiencias visuales únicas en eventos de toda España.</p>
+
+                <div class="features-grid">
+                    <div class="feature-card reveal-slide-up">
+                        <div class="feature-icon">&#9733;</div>
+                        <h3>Experiencia profesional</h3>
+                        <p>Equipo de maquilladoras profesionales con formación en colorimetría y técnicas artísticas avanzadas.</p>
+                    </div>
+                    <div class="feature-card reveal-slide-up reveal-delay-1">
+                        <div class="feature-icon">&#9825;</div>
+                        <h3>Productos seguros</h3>
+                        <p>Trabajamos exclusivamente con productos hipoalergénicos, veganos y biodegradables, seguros para todo tipo de pieles.</p>
+                    </div>
+                    <div class="feature-card reveal-slide-up reveal-delay-2">
+                        <div class="feature-icon">&#9998;</div>
+                        <h3>Diseños personalizados</h3>
+                        <p>Cada evento es único. Adaptamos nuestros diseños a la temática, colores y estilo de tu celebración.</p>
+                    </div>
+                    <div class="feature-card reveal-slide-up reveal-delay-3">
+                        <div class="feature-icon">&#9992;</div>
+                        <h3>Flexibilidad total</h3>
+                        <p>Nos desplazamos a cualquier punto de Madrid y alrededores. Nos adaptamos a tus horarios y necesidades.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- BANNER CTA (imagen a pantalla completa con llamada a la acción) -->
+        <section class="cta-banner">
+            <div class="cta-banner-overlay"></div>
+            <div class="container cta-banner-content reveal-fade">
+                <h2>¿Quieres esto en tu evento?</h2>
+                <p>Haz que tu celebración sea inolvidable. Cuéntanos tu idea y la hacemos realidad.</p>
+                <a href="{% url 'contacto' %}" class="btn btn-primary btn-hover-shine">Pedir presupuesto</a>
+            </div>
+        </section>
+
+        <!-- FAQ (inspirada en Glitter Bar Madrid) -->
+        <section id="faq" class="section">
+            <div class="container">
+                <h2 class="section-title reveal-fade">Preguntas <span class="text-accent">Frecuentes</span></h2>
+                <p class="section-subtitle reveal-fade">Resolvemos tus dudas antes de que las tengas.</p>
+
+                <div class="faq-list">
+                    <details class="faq-item reveal-slide-up">
+                        <summary class="faq-question">
+                            <span>¿Qué tipo de productos utilizáis?</span>
+                            <span class="faq-icon">+</span>
+                        </summary>
+                        <div class="faq-answer">
+                            <p>Trabajamos exclusivamente con pinturas y productos hipoalergénicos, veganos y biodegradables, especialmente formulados para ser seguros en todo tipo de pieles, incluso las más sensibles. Nuestros glitter en gel están hechos a mano, sin pegamentos, y son fáciles de eliminar con agua y jabón.</p>
+                        </div>
+                    </details>
+
+                    <details class="faq-item reveal-slide-up">
+                        <summary class="faq-question">
+                            <span>¿Cuánto dura el maquillaje en la piel?</span>
+                            <span class="faq-icon">+</span>
+                        </summary>
+                        <div class="faq-answer">
+                            <p>Nuestros maquillajes están formulados para resistir durante todo el evento (entre 4 y 8 horas dependiendo del tipo). Son resistentes al sudor y al agua, y se retiran fácilmente con agua y jabón o toallitas desmaquillantes.</p>
+                        </div>
+                    </details>
+
+                    <details class="faq-item reveal-slide-up">
+                        <summary class="faq-question">
+                            <span>¿Con cuánta antelación debo reservar?</span>
+                            <span class="faq-icon">+</span>
+                        </summary>
+                        <div class="faq-answer">
+                            <p>Recomendamos reservar con al menos 2-3 semanas de antelación, especialmente en temporada alta (mayo-octubre). Algunas fechas se llenan rápido, así que cuanto antes nos contactes, mejor podremos asegurar tu fecha.</p>
+                        </div>
+                    </details>
+
+                    <details class="faq-item reveal-slide-up">
+                        <summary class="faq-question">
+                            <span>¿Cuánto cuesta contratar vuestros servicios?</span>
+                            <span class="faq-icon">+</span>
+                        </summary>
+                        <div class="faq-answer">
+                            <p>El precio depende de la duración del servicio, el número de maquilladoras necesarias, el lugar del evento y el número de invitados. Contacta con nosotros y te enviaremos un presupuesto personalizado sin compromiso.</p>
+                        </div>
+                    </details>
+
+                    <details class="faq-item reveal-slide-up">
+                        <summary class="faq-question">
+                            <span>¿Es seguro para niños?</span>
+                            <span class="faq-icon">+</span>
+                        </summary>
+                        <div class="faq-answer">
+                            <p>Absolutamente. Todos nuestros productos están dermatológicamente testados y son aptos para pieles sensibles e infantiles. Llevamos años maquillando a los más pequeños en cumpleaños, comuniones y fiestas escolares.</p>
+                        </div>
+                    </details>
+
+                    <details class="faq-item reveal-slide-up">
+                        <summary class="faq-question">
+                            <span>¿Os desplazáis fuera de Madrid?</span>
+                            <span class="faq-icon">+</span>
+                        </summary>
+                        <div class="faq-answer">
+                            <p>Sí, nos desplazamos a toda la Comunidad de Madrid y también cubrimos eventos en otras provincias. Consúltanos tu ubicación y te informamos sin compromiso.</p>
+                        </div>
+                    </details>
+
+                    <details class="faq-item reveal-slide-up">
+                        <summary class="faq-question">
+                            <span>¿Cómo puedo reservar?</span>
+                            <span class="faq-icon">+</span>
+                        </summary>
+                        <div class="faq-answer">
+                            <p>Puedes contactarnos a través de nuestro formulario de contacto, por teléfono, WhatsApp o Instagram. Te responderemos lo antes posible para enviarte toda la información y reservar tu fecha.</p>
+                        </div>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACTO RÁPIDO -->
+        <section id="contact" class="section section-alt">
+            <div class="container">
+                <h2 class="section-title reveal-fade">¿Hablamos?</h2>
+                <p class="section-subtitle reveal-fade">Pide presupuesto sin compromiso. Nos adaptamos a tu evento.</p>
+
+                <form class="contact-form reveal-slide-up" action="{% url 'contacto' %}" method="POST" novalidate>
+                    {% csrf_token %}
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Nombre</label>
+                            <input type="text" id="name" name="name" placeholder="Tu nombre" required autocomplete="name">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" placeholder="tu@email.com" required autocomplete="email">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="phone">Teléfono <span class="optional">(opcional)</span></label>
+                            <input type="tel" id="phone" name="phone" placeholder="+34 600 000 000" autocomplete="tel">
+                        </div>
+                        <div class="form-group">
+                            <label for="event-type">Tipo de evento</label>
+                            <select id="event-type" name="event-type">
+                                <option value="" disabled selected>Selecciona...</option>
+                                <option value="boda">Boda</option>
+                                <option value="cumpleanos">Cumpleaños infantil</option>
+                                <option value="comunion">Comunión</option>
+                                <option value="corporativo">Evento corporativo</option>
+                                <option value="festival">Festival / Fiesta</option>
+                                <option value="otro">Otro</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Mensaje</label>
+                        <textarea id="message" name="message" rows="5" placeholder="Cuéntanos tu idea: fecha, lugar, número de invitados..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-submit btn-hover-shine">Enviar Solicitud</button>
+                </form>
+            </div>
+        </section>
+
+{% endblock %}
