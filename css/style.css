@@ -101,6 +101,10 @@ a {
     color: var(--color-accent);
 }
 
+.mt-xl {
+    margin-top: var(--spacing-xl);
+}
+
 /* ================================================
    HEADER
    ================================================ */
@@ -275,6 +279,12 @@ a {
 
 .nav-links > li > a.active {
     color: var(--color-accent);
+}
+
+/* Active state for dropdown menu items (service pages) */
+.dropdown-menu a.active {
+    color: var(--color-accent);
+    font-weight: 600;
 }
 
 /* Header CTA */
@@ -487,19 +497,27 @@ a {
     border-color: var(--color-accent);
 }
 
-/* Color del boton/links en header cuando es transparente (hero) */
-.header:not(.is-scrolled):not(.header-solid) .nav-links > li > a {
-    color: var(--color-white);
+/* Color del boton/links en header cuando es transparente (hero) — solo desktop */
+@media (min-width: 768px) {
+    .header:not(.is-scrolled):not(.header-solid) .nav-links > li > a {
+        color: var(--color-white);
+    }
+
+    .header:not(.is-scrolled):not(.header-solid) .nav-links > li > .dropdown-toggle {
+        color: var(--color-white);
+    }
+
+    .header:not(.is-scrolled):not(.header-solid) .nav-links > li > a:hover,
+    .header:not(.is-scrolled):not(.header-solid) .nav-links > li > .dropdown-toggle:hover {
+        color: var(--color-accent-light);
+        background-color: rgba(255, 255, 255, 0.1);
+    }
 }
 
-.header:not(.is-scrolled):not(.header-solid) .nav-links > li > .dropdown-toggle {
-    color: var(--color-white);
-}
-
-.header:not(.is-scrolled):not(.header-solid) .nav-links > li > a:hover,
-.header:not(.is-scrolled):not(.header-solid) .nav-links > li > .dropdown-toggle:hover {
-    color: var(--color-accent-light);
-    background-color: rgba(255, 255, 255, 0.1);
+/* Fix: En movil el panel nav siempre tiene fondo blanco, asi que los links deben ser oscuros */
+.main-nav .nav-links > li > a,
+.main-nav .nav-links > li > .dropdown-toggle {
+    color: var(--color-text-dark);
 }
 
 /* ================================================
@@ -837,6 +855,19 @@ a {
     overflow: hidden;
 }
 
+/* Fix: iOS no soporta background-attachment: fixed */
+@supports (-webkit-touch-callout: none) {
+    .cta-banner {
+        background-attachment: scroll;
+    }
+}
+
+@media (hover: none) and (pointer: coarse) {
+    .cta-banner {
+        background-attachment: scroll;
+    }
+}
+
 .cta-banner-overlay {
     position: absolute;
     top: 0;
@@ -920,7 +951,6 @@ a {
 }
 
 .faq-question::marker {
-    display: none;
     content: '';
 }
 
@@ -1096,7 +1126,6 @@ a {
 
 .lightbox-caption {
     color: rgba(255, 255, 255, 0.8);
-    font-size: 0.95rem;
     margin-top: var(--spacing-md);
     text-align: center;
     font-family: var(--font-heading);
@@ -1486,7 +1515,7 @@ textarea {
    FOOTER
    ================================================ */
 .footer {
-    background-color: var(--color-heading);
+    background-color: #2d2a26;
     color: rgba(255, 255, 255, 0.8);
     padding: var(--spacing-xl) 0 0 0;
 }
@@ -1585,7 +1614,7 @@ textarea {
 
 .footer-bottom-content p {
     font-size: 0.85rem;
-    color: rgba(255, 255, 255, 0.4);
+    color: rgba(255, 255, 255, 0.5);
 }
 
 .footer-legal {
@@ -1595,7 +1624,7 @@ textarea {
 
 .footer-legal a {
     font-size: 0.8rem;
-    color: rgba(255, 255, 255, 0.35);
+    color: rgba(255, 255, 255, 0.55);
     transition: color var(--transition-base);
 }
 
